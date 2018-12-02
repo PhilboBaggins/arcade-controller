@@ -7,10 +7,10 @@ SVG_FILES  := $(patsubst %.scad,%.svg,$(SCAD_FILES))
 all: $(DXF_FILES) $(SVG_FILES)
 
 %.dxf: %.scad
-	openscad -o $@ $^
+	openscad -o $@ $^ -D 'lid();'
 
 %.svg: %.scad
-	openscad -o $@ $^
+	openscad -o $@ $^ -D 'lid();'
 
 clean:
 	rm -f $(DXF_FILES)

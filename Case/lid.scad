@@ -47,6 +47,3 @@ module lid()
         }
     }
 }
-
-//linear_extrude(height = 5)
-lid();
